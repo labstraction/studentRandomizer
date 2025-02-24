@@ -79,7 +79,7 @@ function betterSplice(array, index=0, removalsNumber = 1){
 }
 
 function randomArrayIndex(array){
-    const randomIndex = Math.round(Math.random() * array.length);
+    const randomIndex = Math.round(Math.random() * (array.length - 1));
     return randomIndex;
 }
 
