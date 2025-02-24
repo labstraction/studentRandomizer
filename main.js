@@ -70,13 +70,23 @@ const hugo = {
     marks: [10, 10, 8]
 }
 
-const allStudents = [lorenzo, jan, giovanni, sara, jeremias, laura, eusebio, hugo]
+const allStudents = [lorenzo, jan, giovanni, sara, jeremias, laura, eusebio, hugo];
+
+function betterSplice(array, index=0, removalsNumber = 1){
+    const newArray = [...array];
+    newArray.splice(index, removalsNumber);
+    return newArray;
+}
+
+function randomArrayIndex(array){
+    const randomIndex = Math.round(Math.random() * array.length);
+    return randomIndex;
+}
 
 function main(){
     
     //0) recupera le informazioni degli studenti dal file students.json
     //const allStudents = getStudentsFromJsonFile('students.json')
-
 
     //1) dall'array di studenti estrai un array di coppie di studenti
     // [[student3name, student8name],[student4name, student5name],[student1name, student7name],[studen2name, student6name]]
